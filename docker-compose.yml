@@ -11,6 +11,8 @@ services:
     restart: always
     devices:
       - /dev/dri:/dev/dri
+    ports:
+      - 11434:11434  # <--- HIER: Portfreigabe nach außen
     volumes:
       - ollama-intel-gpu:/root/.ollama
     environment:
